@@ -63,3 +63,19 @@ function matriisi(n)
 end
  
 matriisi(n);
+
+%Exercise 2
+
+% Parametrit
+Vt = 1;
+Vgs = 4;
+kn_prime_WL = 0.5;
+
+% v_DS arvot
+v_DS = [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0];  % in Volts
+
+% Lasketaan i_D jokaiselle v_DS:lle
+i_D = kn_prime_WL * ((Vgs - Vt) .* v_DS - 0.5 .* v_DS.^2);
+
+% Tulostetaan vektori
+disp(i_D);
